@@ -19,7 +19,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "https://kamal-walia.github.io/emoji-finder",
+  "homepage": "https://kamal-walia.github.io/Emoji-Finder",
   "browserslist": [
     ">0.2%",
     "not dead",

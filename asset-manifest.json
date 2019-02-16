@@ -1,13 +1,13 @@
 {
-  "main.css": "/Emoji-Finder/build/static/css/main.83d4cd70.chunk.css",
-  "main.js": "/Emoji-Finder/build/static/js/main.1506487f.chunk.js",
-  "main.js.map": "/Emoji-Finder/build/static/js/main.1506487f.chunk.js.map",
-  "runtime~main.js": "/Emoji-Finder/build/static/js/runtime~main.29752eb2.js",
-  "runtime~main.js.map": "/Emoji-Finder/build/static/js/runtime~main.29752eb2.js.map",
-  "static/js/2.5972b1b8.chunk.js": "/Emoji-Finder/build/static/js/2.5972b1b8.chunk.js",
-  "static/js/2.5972b1b8.chunk.js.map": "/Emoji-Finder/build/static/js/2.5972b1b8.chunk.js.map",
-  "index.html": "/Emoji-Finder/build/index.html",
-  "precache-manifest.f35a0ab07f827de5d530d11b1ef6a074.js": "/Emoji-Finder/build/precache-manifest.f35a0ab07f827de5d530d11b1ef6a074.js",
-  "service-worker.js": "/Emoji-Finder/build/service-worker.js",
-  "static/css/main.83d4cd70.chunk.css.map": "/Emoji-Finder/build/static/css/main.83d4cd70.chunk.css.map"
+  "main.css": "/emoji-finder/static/css/main.83d4cd70.chunk.css",
+  "main.js": "/emoji-finder/static/js/main.1506487f.chunk.js",
+  "main.js.map": "/emoji-finder/static/js/main.1506487f.chunk.js.map",
+  "runtime~main.js": "/emoji-finder/static/js/runtime~main.6201d940.js",
+  "runtime~main.js.map": "/emoji-finder/static/js/runtime~main.6201d940.js.map",
+  "static/js/2.5972b1b8.chunk.js": "/emoji-finder/static/js/2.5972b1b8.chunk.js",
+  "static/js/2.5972b1b8.chunk.js.map": "/emoji-finder/static/js/2.5972b1b8.chunk.js.map",
+  "index.html": "/emoji-finder/index.html",
+  "precache-manifest.2c37e2ba37117ab7de4985987c6fd601.js": "/emoji-finder/precache-manifest.2c37e2ba37117ab7de4985987c6fd601.js",
+  "service-worker.js": "/emoji-finder/service-worker.js",
+  "static/css/main.83d4cd70.chunk.css.map": "/emoji-finder/static/css/main.83d4cd70.chunk.css.map"
 }

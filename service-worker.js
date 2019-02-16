@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Emoji-Finder/build/precache-manifest.f35a0ab07f827de5d530d11b1ef6a074.js"
+  "/emoji-finder/precache-manifest.2c37e2ba37117ab7de4985987c6fd601.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Emoji-Finder/build/index.html", {
+workbox.routing.registerNavigationRoute("/emoji-finder/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

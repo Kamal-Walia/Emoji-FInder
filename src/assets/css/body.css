@@ -3,9 +3,20 @@ ol{
     padding: unset;
 }
 ol>li{
-    border-bottom:1px solid #ccc;
-    padding: 10px;
-    height: 32px;
+    padding: 8px;
     position: relative;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: fantasy;
+    font-size: 22px;
+}    
+button{
+    width:100%;
+    background-color: transparent;
+    border: none;
+    border-bottom:1px solid #ccc;
+}
+p{
+    text-align: left;
+    font-family: fantasy;
+    font-size: 22px;
+    margin: 15px
 }

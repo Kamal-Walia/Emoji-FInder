@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/css/header.css';
 const Heading = () => {
-    return <h2>The Emoji Finder App</h2>
+    return <div><h2>The Emoji Finder App</h2><br/><h3>Click To Copy The Emoji</h3></div>
 }
 class Search extends React.Component {
     render() {

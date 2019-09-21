@@ -7,13 +7,24 @@
     width: 100%;
 }
 h2{
-    padding: 15px;
+    padding: 8px;
     position: relative;
     font-weight: normal;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 32px;
     text-align: center;
     color: #333;
+    font-weight: bold;
+    margin: 0px;
+    margin-top: 18px;
+}
+h3{
+    position: relative;
+    font-weight: normal;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: #333;
+    margin: 0px;
 }
 .header{
     border-bottom: 1px solid #ccc;

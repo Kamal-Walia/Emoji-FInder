@@ -25,12 +25,16 @@ class Body extends React.Component {
     });
   }
 
-  render() {
-    const emojiList = this.state.emoji.filter(
+  getFilteredEmojiList = () => {
+    return this.state.emoji.filter(
       emo =>
         emo.keywords.includes(this.props.emoji) ||
         emo.title.includes(this.props.emoji)
     );
+  }
+
+  render() {
+    const emojiList = this.getFilteredEmojiList();
     return (
       <div className="body">
         <ol>

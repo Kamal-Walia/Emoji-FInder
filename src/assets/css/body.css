@@ -6,7 +6,7 @@ ol>li{
     padding: 8px;
     position: relative;
     font-family: fantasy;
-    font-size: 22px;
+    font-size: 24px;
 }    
 button{
     width:100%;
@@ -17,6 +17,6 @@ button{
 p{
     text-align: left;
     font-family: fantasy;
-    font-size: 22px;
+    font-size: 24px;
     margin: 15px
 }

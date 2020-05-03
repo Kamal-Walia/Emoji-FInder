@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Emoji-Finder/static/css/main.cad33c6f.chunk.css",
-    "main.js": "/Emoji-Finder/static/js/main.021fb72e.chunk.js",
-    "main.js.map": "/Emoji-Finder/static/js/main.021fb72e.chunk.js.map",
+    "main.js": "/Emoji-Finder/static/js/main.6fe398ed.chunk.js",
+    "main.js.map": "/Emoji-Finder/static/js/main.6fe398ed.chunk.js.map",
     "runtime-main.js": "/Emoji-Finder/static/js/runtime-main.d16e67ae.js",
     "runtime-main.js.map": "/Emoji-Finder/static/js/runtime-main.d16e67ae.js.map",
     "static/js/2.b5a6d9a3.chunk.js": "/Emoji-Finder/static/js/2.b5a6d9a3.chunk.js",
     "static/js/2.b5a6d9a3.chunk.js.map": "/Emoji-Finder/static/js/2.b5a6d9a3.chunk.js.map",
     "index.html": "/Emoji-Finder/index.html",
-    "precache-manifest.9ceec1ab686a16fa5bcb82e23f8261ee.js": "/Emoji-Finder/precache-manifest.9ceec1ab686a16fa5bcb82e23f8261ee.js",
+    "precache-manifest.3324d8bcb48776709037c79741184978.js": "/Emoji-Finder/precache-manifest.3324d8bcb48776709037c79741184978.js",
     "service-worker.js": "/Emoji-Finder/service-worker.js",
     "static/css/main.cad33c6f.chunk.css.map": "/Emoji-Finder/static/css/main.cad33c6f.chunk.css.map",
     "static/js/2.b5a6d9a3.chunk.js.LICENSE.txt": "/Emoji-Finder/static/js/2.b5a6d9a3.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d16e67ae.js",
     "static/js/2.b5a6d9a3.chunk.js",
     "static/css/main.cad33c6f.chunk.css",
-    "static/js/main.021fb72e.chunk.js"
+    "static/js/main.6fe398ed.chunk.js"
   ]
 }

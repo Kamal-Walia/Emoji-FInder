@@ -19,8 +19,8 @@ class Body extends React.Component {
   }
   fetchdata = () => {
     return fetch(
-      "https://jsonblob.com/2d232f92-8d1d-11ea-91b5-6bdf926537a2"
-    ).then(function(response) {
+      "https://jsonblob.com/api/0cafa9ae-8d20-11ea-91b5-97ac01ee1af0"
+    ).then(function (response) {
       return response.json().then(res => res);
     });
   }
@@ -43,14 +43,14 @@ class Body extends React.Component {
               <CopyToClipboard key={emo.title}>{({ copy }) => (<button onClick={() => copy(emo.symbol)}>
                 <li> <p>
                   {emo.symbol} {emo.title}
-                  </p>
+                </p>
                 </li>
-              </button>  )}
-              </CopyToClipboard> 
+              </button>)}
+              </CopyToClipboard>
             ))
           ) : (
-            <li>No Emoji</li>
-          )}
+              <li>No Emoji</li>
+            )}
         </ol>
       </div>
     );

@@ -19,7 +19,7 @@ class Body extends React.Component {
   }
   fetchdata = () => {
     return fetch(
-      "https://jsonblob.com/api/dd6656b8-1166-11eb-b9b6-01b942775f3c"
+      "https://jsonblob.com/api/7d39dd87-1167-11eb-b9b6-73f7ced8054d"
     ).then(function (response) {
       return response.json().then(res => res);
     });

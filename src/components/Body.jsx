@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/css/body.css";
-//import emoji from '../emojiList.js';
+import emoji from '../emojiList.js';
 import "whatwg-fetch";
 import CopyToClipboard from "./CopyToClipboard";
 
@@ -22,6 +22,9 @@ class Body extends React.Component {
       "https://jsonblob.com/api/7d39dd87-1167-11eb-b9b6-73f7ced8054d"
     ).then(function (response) {
       return response.json().then(res => res);
+    }).catch(err => {
+      console.log(err);
+      return emoji;
     });
   }
 

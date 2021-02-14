@@ -8,8 +8,8 @@ class Body extends React.Component {
   constructor() {
     super();
     this.state = { emoji: [] };
-    // this.fetchdata = this.fetchdata.bind(this);
   }
+
   componentDidMount() {
     this.fetchdata().then(data => {
       this.setState({
@@ -17,6 +17,7 @@ class Body extends React.Component {
       });
     });
   }
+  
   fetchdata = () => {
     return fetch(
       "https://jsonblob.com/api/7d39dd87-1167-11eb-b9b6-73f7ced8054d"

@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Emoji-Finder/static/css/main.cad33c6f.chunk.css",
-    "main.js": "/Emoji-Finder/static/js/main.6fe398ed.chunk.js",
-    "main.js.map": "/Emoji-Finder/static/js/main.6fe398ed.chunk.js.map",
-    "runtime-main.js": "/Emoji-Finder/static/js/runtime-main.d16e67ae.js",
-    "runtime-main.js.map": "/Emoji-Finder/static/js/runtime-main.d16e67ae.js.map",
-    "static/js/2.b5a6d9a3.chunk.js": "/Emoji-Finder/static/js/2.b5a6d9a3.chunk.js",
-    "static/js/2.b5a6d9a3.chunk.js.map": "/Emoji-Finder/static/js/2.b5a6d9a3.chunk.js.map",
+    "main.css": "/Emoji-Finder/static/css/main.36b333be.chunk.css",
+    "main.js": "/Emoji-Finder/static/js/main.9ae2c98a.chunk.js",
+    "main.js.map": "/Emoji-Finder/static/js/main.9ae2c98a.chunk.js.map",
+    "runtime-main.js": "/Emoji-Finder/static/js/runtime-main.9e243a1b.js",
+    "runtime-main.js.map": "/Emoji-Finder/static/js/runtime-main.9e243a1b.js.map",
+    "static/js/2.919a5c79.chunk.js": "/Emoji-Finder/static/js/2.919a5c79.chunk.js",
+    "static/js/2.919a5c79.chunk.js.map": "/Emoji-Finder/static/js/2.919a5c79.chunk.js.map",
     "index.html": "/Emoji-Finder/index.html",
-    "precache-manifest.3324d8bcb48776709037c79741184978.js": "/Emoji-Finder/precache-manifest.3324d8bcb48776709037c79741184978.js",
+    "precache-manifest.2e38d88b582ec762630843e6cd391eb7.js": "/Emoji-Finder/precache-manifest.2e38d88b582ec762630843e6cd391eb7.js",
     "service-worker.js": "/Emoji-Finder/service-worker.js",
-    "static/css/main.cad33c6f.chunk.css.map": "/Emoji-Finder/static/css/main.cad33c6f.chunk.css.map",
-    "static/js/2.b5a6d9a3.chunk.js.LICENSE.txt": "/Emoji-Finder/static/js/2.b5a6d9a3.chunk.js.LICENSE.txt"
+    "static/css/main.36b333be.chunk.css.map": "/Emoji-Finder/static/css/main.36b333be.chunk.css.map",
+    "static/js/2.919a5c79.chunk.js.LICENSE.txt": "/Emoji-Finder/static/js/2.919a5c79.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d16e67ae.js",
-    "static/js/2.b5a6d9a3.chunk.js",
-    "static/css/main.cad33c6f.chunk.css",
-    "static/js/main.6fe398ed.chunk.js"
+    "static/js/runtime-main.9e243a1b.js",
+    "static/js/2.919a5c79.chunk.js",
+    "static/css/main.36b333be.chunk.css",
+    "static/js/main.9ae2c98a.chunk.js"
   ]
 }

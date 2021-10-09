@@ -1,22 +1,20 @@
 {
   "files": {
-    "main.css": "/Emoji-Finder/static/css/main.36b333be.chunk.css",
-    "main.js": "/Emoji-Finder/static/js/main.9ae2c98a.chunk.js",
-    "main.js.map": "/Emoji-Finder/static/js/main.9ae2c98a.chunk.js.map",
-    "runtime-main.js": "/Emoji-Finder/static/js/runtime-main.9e243a1b.js",
-    "runtime-main.js.map": "/Emoji-Finder/static/js/runtime-main.9e243a1b.js.map",
-    "static/js/2.919a5c79.chunk.js": "/Emoji-Finder/static/js/2.919a5c79.chunk.js",
-    "static/js/2.919a5c79.chunk.js.map": "/Emoji-Finder/static/js/2.919a5c79.chunk.js.map",
+    "main.css": "/Emoji-Finder/static/css/main.94701e54.chunk.css",
+    "main.js": "/Emoji-Finder/static/js/main.1bee8e90.chunk.js",
+    "main.js.map": "/Emoji-Finder/static/js/main.1bee8e90.chunk.js.map",
+    "runtime-main.js": "/Emoji-Finder/static/js/runtime-main.24499396.js",
+    "runtime-main.js.map": "/Emoji-Finder/static/js/runtime-main.24499396.js.map",
+    "static/js/2.c052e701.chunk.js": "/Emoji-Finder/static/js/2.c052e701.chunk.js",
+    "static/js/2.c052e701.chunk.js.map": "/Emoji-Finder/static/js/2.c052e701.chunk.js.map",
     "index.html": "/Emoji-Finder/index.html",
-    "precache-manifest.64f0c15c303b779a76a2e6be8c3c782d.js": "/Emoji-Finder/precache-manifest.64f0c15c303b779a76a2e6be8c3c782d.js",
-    "service-worker.js": "/Emoji-Finder/service-worker.js",
-    "static/css/main.36b333be.chunk.css.map": "/Emoji-Finder/static/css/main.36b333be.chunk.css.map",
-    "static/js/2.919a5c79.chunk.js.LICENSE.txt": "/Emoji-Finder/static/js/2.919a5c79.chunk.js.LICENSE.txt"
+    "static/css/main.94701e54.chunk.css.map": "/Emoji-Finder/static/css/main.94701e54.chunk.css.map",
+    "static/js/2.c052e701.chunk.js.LICENSE.txt": "/Emoji-Finder/static/js/2.c052e701.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9e243a1b.js",
-    "static/js/2.919a5c79.chunk.js",
-    "static/css/main.36b333be.chunk.css",
-    "static/js/main.9ae2c98a.chunk.js"
+    "static/js/runtime-main.24499396.js",
+    "static/js/2.c052e701.chunk.js",
+    "static/css/main.94701e54.chunk.css",
+    "static/js/main.1bee8e90.chunk.js"
   ]
 }

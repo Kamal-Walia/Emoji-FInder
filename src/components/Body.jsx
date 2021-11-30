@@ -3,11 +3,12 @@ import "../assets/css/body.css";
 import emoji from '../emojiList.js';
 import "whatwg-fetch";
 import CopyToClipboard from "./CopyToClipboard";
+import debounce from 'lodash.debounce';
 
 class Body extends React.Component {
   constructor() {
     super();
-    // this.state = { emoji: [] };
+    this.state = { emojis: [] };
   }
 
   componentDidMount() {
@@ -16,8 +17,15 @@ class Body extends React.Component {
     //     emoji: data
     //   });
     // })
+    this.getFilteredEmojiList()
   }
-  
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.emoji !== this.props.emoji) {
+      this.getFilteredEmojiList()
+    }
+  }
+
   fetchdata = () => {
     return emoji
     // return fetch(
@@ -30,20 +38,30 @@ class Body extends React.Component {
   }
 
   getFilteredEmojiList = () => {
-    return emoji.filter(
-      emo =>
-        emo.keywords.includes(this.props.emoji) ||
-        emo.title.includes(this.props.emoji)
-    );
+    if (this.props.emoji.length === 0) {
+      this.setState({ emojis: emoji })
+    } else {
+      const debounced = debounce(() => {
+        const emojis = emoji.filter(
+          emo =>
+            emo.keywords.includes(this.props.emoji) ||
+            emo.title.includes(this.props.emoji)
+        )
+        this.setState({ emojis })
+      }
+
+        , 300);
+      debounced()
+    }
   }
 
   render() {
-    const emojiList = this.getFilteredEmojiList();
+    const emojis = this.state.emojis;
     return (
       <div className="body">
         <ol>
-          {emojiList.length > 0 ? (
-            emojiList.map(emo => (
+          {emojis?.length > 0 ? (
+            emojis.map(emo => (
               <CopyToClipboard key={emo.title}>{({ copy }) => (<button onClick={() => copy(emo.symbol)}>
                 <li> <p>
                   {emo.symbol} {emo.title}
@@ -53,8 +71,8 @@ class Body extends React.Component {
               </CopyToClipboard>
             ))
           ) : (
-              <li>No Emoji</li>
-            )}
+            <li>No Emoji</li>
+          )}
         </ol>
       </div>
     );

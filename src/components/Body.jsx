@@ -60,7 +60,7 @@ class Body extends React.Component {
     return (
       <div className="body">
         <ol>
-          {emojis?.length > 0 ? (
+          {emojis?.length > 0 && (
             emojis.map(emo => (
               <CopyToClipboard key={emo.title}>{({ copy }) => (<button onClick={() => copy(emo.symbol)}>
                 <li> <p>
@@ -70,10 +70,8 @@ class Body extends React.Component {
               </button>)}
               </CopyToClipboard>
             ))
-          ) : (
-              <li>No Emoji</li>
-            )}
-            {this.props.gifs.length > 0 ? (
+          )}
+            {this.props.gifs.length > 0 && (
             this.props.gifs.map(gifs => (
               <CopyToClipboard key={gifs.id}>{({ copy }) => (<button onClick={() => copy(gifs.media[0]?.gif?.url)}>
                 <li> <img src={gifs.media[0]?.gif?.url} />
@@ -81,9 +79,8 @@ class Body extends React.Component {
               </button>)}
               </CopyToClipboard>
             ))
-          ) : (
-              <li>No Emoji</li>
-            )}
+          )}
+           {!this.props.gifs?.length && !emojis?.length ?  <li>No Emoji or Gifs Found </li> : null} 
         </ol>
       </div>
     );

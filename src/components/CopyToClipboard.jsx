@@ -1,39 +1,28 @@
-import Tooltip from "@material-ui/core/Tooltip";
+import React, { useState } from "react";
 import copy from "clipboard-copy";
-import * as React from "react";
+import Tooltip from "@material-ui/core/Tooltip";
 
-/**
- * Render prop component that wraps element in a Tooltip that shows "Copied to clipboard!" when the
- * copy function is invoked
- */
+export default function CopyToClipboard({ children }) {
+  const [showTooltip, setShowTooltip] = useState(false);
 
-class CopyToClipboard extends React.Component {
-  constructor() {
-    super();
-    this.state = { showTooltip: false };
-  }
-  render() {
-    return (
-      <Tooltip
-        open={this.state.showTooltip}
-        title={"Copied To Clipboard!"}
-        leaveDelay={500}
-        onClose={this.handleOnTooltipClose}
-        placement="top"
-      >
-        {this.props.children({ copy: this.onCopy })}
-      </Tooltip>
-    );
+  function handleOnTooltipClose() {
+    setShowTooltip(false);
   }
 
-  onCopy = content => {
+  function onCopy(content) {
     copy(content);
-    this.setState({ showTooltip: true });
-  };
+    setShowTooltip(true);
+  }
 
-  handleOnTooltipClose = () => {
-    this.setState({ showTooltip: false });
-  };
+  return (
+    <Tooltip
+      open={showTooltip}
+      title={"Copied To Clipboard!"}
+      leaveDelay={500}
+      onClose={handleOnTooltipClose}
+      placement="top"
+    >
+      {children({ copy: onCopy })}
+    </Tooltip>
+  );
 }
-
-export default CopyToClipboard;

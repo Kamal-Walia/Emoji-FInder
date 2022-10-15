@@ -11,14 +11,16 @@ class App extends React.Component {
     }
     handleChange = async (e) => {
         this.setState({ search: e.target.value })
-        const response = await fetch(
-            `https://g.tenor.com/v1/search?q=${e.target.value}&key=LIVDSRZULELA&limit=8`
-        ).then(function (response) {
-            return response.json().then(res => res);
-        }).catch(err => {
-            console.log(err);
-        });
-        this.setState({ gifs: response.results })
+        if(e.target.value && e.target.value.length > 3){
+            const response = await fetch(
+                `https://g.tenor.com/v1/search?q=${e.target.value}&key=LIVDSRZULELA&limit=8`
+            ).then(function (response) {
+                return response.json().then(res => res);
+            }).catch(err => {
+                console.log(err);
+            });
+            this.setState({ gifs: response.results })
+        }
     }
     render() {
         return (

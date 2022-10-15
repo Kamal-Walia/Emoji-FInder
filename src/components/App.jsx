@@ -7,16 +7,24 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         // this.handleChange = this.handleChange.bind(this);
-        this.state = { search: "" };
+        this.state = { search: "", gifs:[] };
     }
-    handleChange = (e) => {
+    handleChange = async (e) => {
         this.setState({ search: e.target.value })
+        const response = await fetch(
+            `https://g.tenor.com/v1/search?q=${e.target.value}&key=LIVDSRZULELA&limit=8`
+        ).then(function (response) {
+            return response.json().then(res => res);
+        }).catch(err => {
+            console.log(err);
+        });
+        this.setState({ gifs: response.results })
     }
     render() {
         return (
             <div className="app">
                 <Header handleChange={this.handleChange} search={this.state.search} />
-                <Body emoji={this.state.search} />
+                <Body emoji={this.state.search} gifs={this.state.gifs}/>
             </div>
         );
     }

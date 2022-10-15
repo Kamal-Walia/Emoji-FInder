@@ -71,8 +71,19 @@ class Body extends React.Component {
               </CopyToClipboard>
             ))
           ) : (
-            <li>No Emoji</li>
-          )}
+              <li>No Emoji</li>
+            )}
+            {this.props.gifs.length > 0 ? (
+            this.props.gifs.map(gifs => (
+              <CopyToClipboard key={gifs.id}>{({ copy }) => (<button onClick={() => copy(gifs.media[0]?.gif?.url)}>
+                <li> <img src={gifs.media[0]?.gif?.url} />
+                </li>
+              </button>)}
+              </CopyToClipboard>
+            ))
+          ) : (
+              <li>No Emoji</li>
+            )}
         </ol>
       </div>
     );

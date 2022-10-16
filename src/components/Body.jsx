@@ -1,89 +1,70 @@
-import React from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "../assets/css/body.css";
-import emoji from '../emojiList.js';
 import "whatwg-fetch";
+import emojiMockedList from "../emojiList.js";
 import CopyToClipboard from "./CopyToClipboard";
-import debounce from 'lodash.debounce';
+import debounce from "lodash.debounce";
 
-class Body extends React.Component {
-  constructor() {
-    super();
-    this.state = { emojis: [] };
-  }
+export default function Body({ gifs, emoji }) {
+  const [emojis, setEmojis] = useState([]);
 
-  componentDidMount() {
-    // this.fetchdata().then(data => {
-    //   this.setState({
-    //     emoji: data
-    //   });
-    // })
-    this.getFilteredEmojiList()
-  }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.emoji !== this.props.emoji) {
-      this.getFilteredEmojiList()
-    }
-  }
-
-  fetchdata = () => {
-    return emoji
-    // return fetch(
-    //   "https://jsonblob.com/api/7d39dd87-1167-11eb-b9b6-73f7ced8054d"
-    // ).then(function (response) {
-    //   return response.json().then(res => res);
-    // }).catch(err => {
-    //   console.log(err);
-    // });
-  }
-
-  getFilteredEmojiList = () => {
-    if (this.props.emoji.length === 0) {
-      this.setState({ emojis: emoji })
+  const getFilteredEmojiList = useCallback(() => {
+    if (emoji.length === 0) {
+      setEmojis(emojiMockedList);
     } else {
-      const debounced = debounce(() => {
-        const emojis = emoji.filter(
-          emo =>
-            emo.keywords.includes(this.props.emoji) ||
-            emo.title.includes(this.props.emoji)
-        )
-        this.setState({ emojis })
-      }
+      const debounced = debounce(
+        () => {
+          const emojis = emojiMockedList.filter(
+            (emo) => emo.keywords.includes(emoji) || emo.title.includes(emoji)
+          );
+          setEmojis(emojis);
+        },
 
-        , 300);
-      debounced()
+        300
+      );
+      debounced();
     }
-  }
+  }, [emoji]);
 
-  render() {
-    const emojis = this.state.emojis;
-    return (
-      <div className="body">
-        <ol>
-          {emojis?.length > 0 && (
-            emojis.map(emo => (
-              <CopyToClipboard key={emo.title}>{({ copy }) => (<button onClick={() => copy(emo.symbol)}>
-                <li> <p>
-                  {emo.symbol} {emo.title}
-                </p>
-                </li>
-              </button>)}
-              </CopyToClipboard>
-            ))
-          )}
-            {this.props.gifs.length > 0 && (
-            this.props.gifs.map(gifs => (
-              <CopyToClipboard key={gifs.id}>{({ copy }) => (<button onClick={() => copy(gifs.media[0]?.gif?.url)}>
-                <li> <img src={gifs.media[0]?.gif?.url} />
-                </li>
-              </button>)}
-              </CopyToClipboard>
-            ))
-          )}
-           {!this.props.gifs?.length && !emojis?.length ?  <li>No Emoji or Gifs Found </li> : null} 
-        </ol>
-      </div>
-    );
-  }
+  useEffect(() => {
+    getFilteredEmojiList();
+  }, [emoji, getFilteredEmojiList]);
+
+  return (
+    <div className="body">
+      <ol>
+        {emojis?.length > 0 &&
+          emojis.map((emo) => (
+            <CopyToClipboard key={emo.title}>
+              {({ copy }) => (
+                <button onClick={() => copy(emo.symbol)}>
+                  <li>
+                    {" "}
+                    <p>
+                      {emo.symbol} {emo.title}
+                    </p>
+                  </li>
+                </button>
+              )}
+            </CopyToClipboard>
+          ))}
+        {gifs.length > 0 &&
+          gifs.map((gifs) => (
+            <CopyToClipboard key={gifs.id}>
+              {({ copy }) => (
+                <button onClick={() => copy(gifs.media[0]?.gif?.url)}>
+                  <li>
+                    {" "}
+                    <img src={gifs.media[0]?.gif?.url} />
+                  </li>
+                </button>
+              )}
+            </CopyToClipboard>
+          ))}
+        {!gifs?.length && !emojis?.length ? (
+          <li>No Emoji or Gifs Found </li>
+        ) : null}
+      </ol>
+    </div>
+  );
 }
-export default Body;
